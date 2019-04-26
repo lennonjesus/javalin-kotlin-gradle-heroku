@@ -1,0 +1,1 @@
+web: java -jar build/libs/javalin-kotlin-gradle-heroku-0.0.1-SNAPSHOT.jar
