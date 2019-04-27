@@ -16,7 +16,7 @@ fun main() {
 
     // app endpoints
     app.routes {
-        get("/hello") { ctx ->
+        get("/") { ctx ->
             ctx.status(200).result("Hello Javalin with Kotlin on Heroku!")
         }
     }
