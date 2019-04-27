@@ -1,0 +1,13 @@
+---
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - kotlin
+  fixme:
+    enabled: true
+ratings:
+  paths:
+    - "**.kt"
+exclude_paths: []
