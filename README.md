@@ -1,7 +1,10 @@
-#javalin-kotlin-gradle-heroku
+# javalin-kotlin-gradle-heroku
 
 ### A simple project to demonstrates how to deploy a Kotlin + Javalin + Gradle application on Heroku 
 
+[![Code Climate](https://codeclimate.com/github/lennonjesus/javalin-kotlin-gradle-heroku/badges/gpa.svg)](https://codeclimate.com/github/lennonjesus/javalin-kotlin-gradle-heroku)
+
+### Requirements
 You should have Git, Java, Gradle and Heroku-cli installed.
 
 
