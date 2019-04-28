@@ -4,21 +4,29 @@ import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.get
 
 fun main() {
+    JavalinApp(7000).init()
+}
 
-    // get heroku port or uses default (for local environment)
-    val port: Int = System.getenv("PORT")?.toIntOrNull() ?: 7000
+class JavalinApp(private val port: Int) {
 
-    // starts Javalin
-    val app = Javalin.create().apply {
-        exception(Exception::class.java) { e, ctx -> e.printStackTrace() }
-        error(404) { ctx -> ctx.json("Not found") }
-    }.start(port)
+    fun init(): Javalin {
 
-    // app endpoints
-    app.routes {
-        get("/") { ctx ->
-            ctx.status(200).result("Hello Javalin with Kotlin on Heroku!")
+        // get heroku port or uses default (for local environment)
+        val port: Int = System.getenv("PORT")?.toIntOrNull() ?: port
+
+        // starts Javalin
+        val app = Javalin.create().apply {
+            exception(Exception::class.java) { e, _ -> e.printStackTrace() }
+            error(404) { ctx -> ctx.json("Not found") }
+        }.start(port)
+
+        // app endpoints
+        app.routes {
+            get("/") { ctx ->
+                ctx.status(200).result("Hello Javalin with Kotlin on Heroku!")
+            }
         }
-    }
 
+        return app
+    }
 }
