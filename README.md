@@ -2,6 +2,7 @@
 
 ### A simple project to demonstrates how to deploy a Kotlin + Javalin + Gradle application on Heroku 
 
+[![Build Status](https://travis-ci.org/lennonjesus/javalin-kotlin-gradle-heroku.svg?branch=master)](https://travis-ci.org/lennonjesus/javalin-kotlin-gradle-heroku)
 [![Code Climate](https://codeclimate.com/github/lennonjesus/javalin-kotlin-gradle-heroku/badges/gpa.svg)](https://codeclimate.com/github/lennonjesus/javalin-kotlin-gradle-heroku)
 
 ### Requirements
