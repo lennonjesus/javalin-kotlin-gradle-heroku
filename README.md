@@ -16,7 +16,14 @@ $ git clone https://github.com/lennonjesus/javalin-kotlin-gradle-heroku.git && c
 
 ### Test on local machine
 
-#### Run project (it will download dependencies, compile sources and start the server)
+#### Run local tests (it will download dependencies, compile sources and run tests)
+```
+$ gradle clean test
+```
+
+### Run on local machine
+
+#### Start server (it will download dependencies, compile sources and start the server)
 ```
 $ gradle run
 ```
