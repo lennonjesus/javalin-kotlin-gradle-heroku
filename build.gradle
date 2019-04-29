@@ -27,6 +27,7 @@ dependencies {
     compile 'khttp:khttp:0.1.0'
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
 }
 
 jar {
@@ -47,6 +48,10 @@ compileKotlin {
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+test {
+    useJUnitPlatform()
 }
 
 task stage(dependsOn: ['build', 'clean', 'jar'])

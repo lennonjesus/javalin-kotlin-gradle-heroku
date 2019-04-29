@@ -17,7 +17,7 @@ class JavalinApp(private val port: Int) {
         // starts Javalin
         val app = Javalin.create().apply {
             exception(Exception::class.java) { e, _ -> e.printStackTrace() }
-            error(404) { ctx -> ctx.json("Not found") }
+            error(404) { ctx -> ctx.result("Not found") }
         }.start(port)
 
         // app endpoints

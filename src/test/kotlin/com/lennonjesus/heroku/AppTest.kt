@@ -15,7 +15,7 @@ class AppTest {
 
         private lateinit var app : Javalin
 
-        private val url = "http://localhost:7000/"
+        private val url = "http://localhost:7000"
 
         @BeforeAll @JvmStatic
         fun setUp() {
@@ -33,6 +33,13 @@ class AppTest {
         val response : Response = get(url)
         assertEquals(200, response.statusCode)
         assertEquals("Hello Javalin with Kotlin on Heroku!", response.text)
+    }
+
+    @Test
+    fun `It should get not found message if resource doesnt exists`() {
+        val response : Response = get("$url/error")
+        assertEquals(404, response.statusCode)
+        assertEquals("Not found", response.text)
     }
 
 }
